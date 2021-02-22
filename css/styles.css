@@ -1,0 +1,487 @@
+/* 
+Reglas estan conformada por:
+selectores--> de etiqueta -->tag html
+            > descendente --> elemento hijo de u tag se anidan con espacio
+            > de clase --> usando el atributo clase de los tags se puede incluir un estilo para más de un tag con .nombre_clase
+            > por id --> con el atributo id sobre el tag solo aplica a un tag ojo, se hace con #nombre_id 
+declaraciones
+propiedades
+valores */
+
+
+/* header{
+  background: deeppink;
+} --> de etiqueta o tag
+body header div nav ol li a {
+background: deeppink;
+} */
+
+/* .link{
+  background-color: deepskyblue;
+} --> los atributos con la clase link van a aplicarseles este estilo */
+/* 
+#portafolio {
+background: deepskyblue;
+}
+
+.logo:hover{
+  border: 2px solid darkmagenta;
+} */
+
+/* Esto no es parte de la pagina start */
+/* La idea es tener un contenedor grande y unos divs el contenedor es flexbox y los divs estan dentro como box */
+.flexbox{
+  display: flex;
+  flex-direction: row; /* dirección de la flexibilización*/
+  flex-wrap: wrap; /* no dejar que se alargue si flex shrink esta bloqueando */
+  justify-content: center; /*space-evenly, space-between */
+  align-items: center; /*con justify content y align item al centro ce centra todo */
+  height: 500px;
+} 
+
+.box{
+  width: 100px;
+  height: 100px;
+  border: 2px solid blue;
+  margin: 5px;
+  flex-shrink: 1; /* con esta propiedad no dejo que memuvea los tamnaños así sean flexibles*/
+}
+
+/* Esto no es parte de la pagina fin */
+
+body{
+  font-family:'Source Sans Pro', 'Times New Roman', Times, serif, sans-serif;
+  margin: 0 auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', 'Times New Roman', Times, serif;
+  font-weight: normal;
+  margin: 0;
+	padding: 0;
+  /* font-style: italic; */
+  /* padding-top: 70px */
+  /* background-image: url("../images/logo_c.png"); */
+  /* opacity: 0.1; */
+}
+
+
+.portfolio{
+  /* padding-right: 20px; */
+  /* padding-left: 20px; */
+  /* border-bottom: 1px solid darkslateblue; */
+  background-color:#fafafa;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  /* box-sizing: border-box; */
+  width: 900px;
+  /* display: flex; */
+  align-items: center;
+  /* flex-direction: column; */
+}
+.project{
+  /* border-top: 10px solid red;
+  border-right: 10px solid green;
+  border-left: 10px solid pink;
+  border-bottom: 10px solid orange; 
+  border-bottom-left-radius: 50px;
+  border-top-color: red;
+  border-width: 15px;
+  border-style: solid;
+  margin: 10px; */
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1px  gray;
+  border-radius: 10px;
+  margin: 25px 0 ;
+  padding: 15px;
+  background-color:white;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 3px 6px -1px #b3b3b3;
+  /* width: inherit;
+  box-sizing: inherit; */
+
+}
+
+.project-details{
+  width: 500px;
+  /* height: 200px; */
+}
+
+.project-title{
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color:rgb(67, 51, 139);
+}
+
+/* .project-image-container{
+  width: 500px;
+} */
+
+.project figure img {
+  width: 400px;
+}
+
+.project-course, .project-date, .project-url {
+  margin: 10px 0;
+}
+.project strong{
+  font-family: 'Source Sans Pro' ;
+}
+
+.project-description{
+  font-size: 15px;
+  font-family: 'Source Sans Pro';
+  padding-right: 15px;
+}
+.project-sub {
+  font-size: 10px;
+  font-family: 'Source Sans Pro'; 
+}
+.hero{
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/compu1.jpg');
+  background-position: center;
+  background-repeat: no repeat;
+  background-size: cover;
+  background-color: #190135;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+  box-sizing: border-box;
+  /* width: 900px; */
+  /* width: 100%; */
+  /* position: fixed; */
+  /* background-position: right; */
+  /* background-size: 500px 300px; */
+  /* padding-left: 30px; */
+  /* padding-right: 30px; */
+  /* border-top: 1px solid white; */
+  /* position: relative; */
+  
+}
+
+
+
+.header{
+   background-color: #1a0135;
+   background-image: url("../images/math.png");
+   color: white;
+   margin: 0%;
+   display: flex;
+   justify-content: space-between;
+   height: 70px;
+   font-size: 120%;
+   width: 100%; 
+   /* hacemos que la cabecera ocupe el ancho completo de la página */
+   left: 0; /* Posicionamos la cabecera al lado izquierdo */
+   top: 0; /* Posicionamos la cabecera pegada arriba */
+   position: fixed; 
+   /* Hacemos que la cabecera tenga una posición fija */
+   /* opacity: 0.9; */
+   /* background-image: url(../images/math.png); */
+ }
+
+.menu{
+  height: inherit;
+}
+
+.header a{
+   color: white;
+   text-decoration: none;
+   height: inherit;
+   display: flex;
+   align-items: center;
+   padding: 0px 10px;
+ }
+
+.header ol{
+display: flex;
+height: inherit;
+}
+
+.header ol li{
+  height: inherit;
+  /* justify-content: space-between; */
+  }
+ 
+nav ol li a:hover {
+  /* opacity: 0.9; */
+  color: #1b5cb1;
+  background-color: rgba(0, 0, 0, 0.3)
+  }
+
+h1{
+  font-size: 40px;
+  line-height: 150%; /*tambien me sirve 1.5em o 1.5*/
+  letter-spacing: -0.2px;
+  color: white;
+  margin: 0;
+  /* text-transform: lowercase; */
+  /* text-decoration: dashed; */
+  /* margin: 100px 150px 50px 70px; */
+}
+ 
+h1 strong{
+   color: #2382ff;
+ }
+
+h2 {
+  color: #00367e;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro' ;
+  font-weight: bold;
+  padding:  40px 0 0px;
+  background-color: #fafafa;
+  margin: 0px;
+}
+
+
+
+figure{
+  margin: 0%;
+  height: inherit;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.logo{
+  height: 90px;
+}
+.hero img{
+  display: flex;
+  flex-shrink: initial;
+}
+
+.footer {
+  background-color: #190135;
+  background-image: url("../images/math.png");
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  /* padding: 7px; */
+}
+.footer img {
+  vertical-align: middle;
+}
+
+.footer a{
+  color: #fafafa;
+}
+
+.event-list-title{
+  color: #00367e;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro' ;
+  font-weight: bold;
+  margin: 0px;
+  background-color: #fafafa;
+  flex-wrap: wrap;
+  /* text-decoration: ; */
+  /* padding: 20px 0px 10px; */
+}
+
+.event-list{
+  display: flex ;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fafafa;
+  margin: 0px; 
+  /* padding: 20px 10px; */
+}
+
+.event{
+  /* border: 1px solid blue; */
+  margin: 20px;
+  width: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: rgb(248, 248, 248);
+  box-shadow: 2px 3px 6px -1px  #b3b3b3;
+  box-sizing: border-box;
+}
+
+
+.event img{
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+  align-items: center;
+}
+
+.event-detail{
+  margin: 20px 40px;
+  /* margin-top: -40px; */
+  background-color: white;
+  /* position: relative; */
+  padding: 20px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.event-description{
+  text-align: left;
+}
+
+.event-url{
+  color: rgb(45, 45, 182);
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.event-url:hover {
+  
+  background:  rgb(118, 51, 139);
+  color: white;
+  border-radius: 3px;
+  border: whitesmoke;
+}
+
+.contact{
+  background-color: rgb(67, 51, 139);
+  color: white;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom:0;
+  /* padding: 0 20px ; */
+}
+
+.contact-title{
+  margin: 5px 0;
+}
+/* .social {
+  border: 1px solid red;
+} */
+
+.social-link {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  margin: 10px;
+  /* border: 1px solid white; */
+}
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+.social-link.twitter {
+  background-image: url('../images/twitter.svg');
+}
+.social-link.linkedin {
+  background-image: url('../images/linkedin.png');
+  /* background-size: 50px 50px; */
+}
+.social-link.github {
+  background-image: url('../images/github.svg');
+  /* background-size: 50px 50px; */
+}
+.social-link.instagram {
+  background-image: url('../images/instagram.svg');
+  /* background-size: 50px 50px; */
+}
+
+.form-email input {
+  border-radius: 3px;
+  border-style: none;
+  border-color: gray;
+  padding: 4px 20px; 
+  background-image: url("../images/envelope.svg");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.form-email button{
+  display: inline;
+  background: transparent;
+  color: white;
+  border-radius: 3px;
+  border-color: white;
+  border-width: 0.5px;
+  padding: 3px 10px;
+  margin: 5px;
+}
+
+.form-email button:hover {
+  /* opacity: 0.8; */
+  color: #c69bf7;
+  border: 1px solid #c69bf7;
+}
+
+.container {
+  padding: 0px 10px;
+  margin: 0 auto;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  border: inherit;
+  width: 900px;
+  /* border: 1px solid red; */
+  
+  box-sizing: border-box
+  /* background-color: inherit */
+  /* padding-top: 70px; */
+  /* background: inherit; */
+  /* position: absolute; */
+}
+
+.hero-image {
+  object-fit: cover;
+}
+
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; 
+  background-color: rgb(67, 51, 139);
+  /* border: 1px solid rgb(67, 51, 139); */
+  color: white;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  /* width: 900px; */
+  box-sizing: border-box
+
+}
+.technologies h3 {
+  font-size: 25px;
+  background-color: inherit;
+}
+
+.technologies-sotfware {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0px 30px;
+}
+
+.technologies-sotfware img {
+height: 50px;
+padding: 0 10px;
+}
